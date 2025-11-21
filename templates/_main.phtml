@@ -1,0 +1,11 @@
+<main>
+    <p>
+        <?= $nodeContainer[$nodeNumber]["context"] ?>
+    </p>
+
+    <?php
+        if (count($nodeContainer[0]["choices"]) > 0) {
+            require "../templates/_form.phtml";
+        }
+    ?>
+</main>

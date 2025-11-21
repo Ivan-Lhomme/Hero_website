@@ -1,0 +1,7 @@
+<form action="" method="post">
+    <fieldset>
+        <?php foreach ($nodeContainer as $node) { ?>
+            <input type="radio" name="<?= $node["name"] ?>">
+        <?php } ?>
+    </fieldset>
+</form>
