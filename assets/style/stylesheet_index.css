@@ -4,30 +4,34 @@ body{
     margin-right: 0;
     margin-bottom: 0;
 }
+main{
+    margin-top: 10%;
+}
 input{
     border: 1px solid;
     border-radius: 1vw;
-    width: 50vw;
-    margin-left: 9vw;
+    width: 50%;
+    margin-left: 11vw;
     margin-top: 2%;
 }
 p{
-    width: 80vw;
+    width: 65vw;
     margin: 0 auto;
-    font-size: 5vw;
-    margin-top: 8%;
+    font-size: 3vw;
+    margin-top: 6%;
+    text-align: center;
 }
 label{
-    font-size: 5vw;
-    margin-left: 3vw;
+    font-size: 3vw;
+    margin-left: 6vw;
 }
 fieldset{
-    width: 70vw;
+    width: 50vw;
     margin: 0 auto;
 }
 footer{
-    margin-top: 30vw;
-    height: 15vw;
+    margin-top: 15vw;
+    height: 10vw;
 }
 
 /* class */
