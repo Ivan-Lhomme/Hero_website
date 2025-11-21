@@ -1,0 +1,36 @@
+/* global */
+body{
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+input{
+    border: 1px solid;
+    border-radius: 1vw;
+    width: 50vw;
+    margin-left: 9vw;
+    margin-top: 2%;
+}
+p{
+    width: 80vw;
+    margin: 0 auto;
+    font-size: 5vw;
+    margin-top: 8%;
+}
+label{
+    font-size: 5vw;
+    margin-left: 3vw;
+}
+fieldset{
+    width: 70vw;
+    margin: 0 auto;
+}
+footer{
+    margin-top: 30vw;
+    height: 15vw;
+}
+
+/* class */
+
+
+/* id */

@@ -1,0 +1,17 @@
+<footer>
+    <a href="<?php if (!isset($isIndex)) { echo '../index.php'; } ?>">Acceuil</a>
+
+    <?php if (!isset($isIndex)) { ?>
+        <a href="<?php $_SERVER['HTTP_REFERER'] ?>">Revenir en arrière</a>
+    <?php } ?>
+
+    <?php if (!isset($isTree)) {
+        if (!isset($isIndex)) { ?>
+            <a href="./page/tree.php">Voir l'arbre</a>
+        <?php } else { ?>
+            <a href="../tree.php">Voir l'arbre</a>
+    <?php
+        }
+    }
+    ?>
+</footer>

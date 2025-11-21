@@ -1,0 +1,55 @@
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    body{
+        color: #bababb;
+        background: #161b22;
+    }
+    input{
+        color: #bababb;
+        background-color: #545c68;
+        border-color: #545c68 !important;
+        text-align: center;
+    }
+    fieldset{
+        border-color: #bababb;
+    }
+    a{
+        color: #bababb;
+    }
+    a:visited{
+        color: #bababb;
+    }
+    footer{
+        background-color: black;
+    }
+}
+
+/* global */
+h1{
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 8vw;
+}
+main{
+    margin-top: 20%;
+}
+fieldset{
+    border-radius: 10vw;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+footer > a{
+    text-decoration: none;
+    font-size: 5vw;
+    margin: auto 0;
+}
+input{
+    font-size: 4vw;
+}
+
+/* class */
+
+
+/* id */
