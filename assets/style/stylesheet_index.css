@@ -14,13 +14,6 @@ input{
     margin-left: 11vw;
     margin-top: 2%;
 }
-p{
-    width: 65vw;
-    margin: 0 auto;
-    font-size: 3vw;
-    margin-top: 6%;
-    text-align: center;
-}
 label{
     font-size: 3vw;
     margin-left: 6vw;
@@ -28,10 +21,6 @@ label{
 fieldset{
     width: 50vw;
     margin: 0 auto;
-}
-footer{
-    margin-top: 15vw;
-    height: 10vw;
 }
 
 /* class */
