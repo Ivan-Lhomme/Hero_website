@@ -19,7 +19,7 @@
         <form id="chooseName" action="./page/node.php" method="post">
             <fieldset>
                 <label for="userName">Comment t'appele-tu étranger ?</label>
-                <input type="text" name="userName" id="userNameInput">
+                <input type="text" name="userName">
             </fieldset>
         </form>
     </main>
