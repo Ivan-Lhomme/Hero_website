@@ -50,6 +50,7 @@ footer > a{
     text-decoration: none;
     font-size: 3vw;
     margin: auto 0;
+    cursor: pointer;
 }
 input{
     font-size: 2vw;
