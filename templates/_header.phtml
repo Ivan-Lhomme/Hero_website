@@ -1,5 +1,11 @@
 <header>
-    <h1>
-        <?= $nodeContainer[$nodeNumber]["name"] ?>
-    </h1>
+    <?php if ($_POST["nodeNumber"] >= 0) { ?>
+        <h1>
+            <?= $nodeContainer[$_POST["nodeNumber"]]["name"] ?>
+        </h1>
+    <?php } else { ?>
+        <h1>
+            <?= $failContainer[($_POST["nodeNumber"] * -1) -1]["name"] ?>
+        </h1>
+    <?php } ?>
 </header>

@@ -2,16 +2,22 @@
     <a href="<?php if (!isset($isIndex)) { echo '../index.php'; } ?>">Acceuil</a>
 
     <?php if (!isset($isIndex)) { ?>
-        <a href="<?php $_SERVER['HTTP_REFERER'] ?>">Revenir en arrière</a>
+        <form action="" method="post" id="previous">
+            <fieldset>
+                <input type="hidden" name="userName" value="<?= $_POST["userName"] ?>">
+                <?php if (!is_numeric($_POST["nodeNumber"])) { ?>
+                    <input type="hidden" name="nodeNumber" value="<?= $winContainer[$_POST["nodeNumber"]]["previousNode"] ?>">
+                <?php } else if ($_POST["nodeNumber"] >= 0) { ?>
+                    <input type="hidden" name="nodeNumber" value="<?= $nodeContainer[$_POST["nodeNumber"]]["previousNode"] ?>">
+                <?php } else { ?>
+                    <input type="hidden" name="nodeNumber" value="<?= $failContainer[($_POST["nodeNumber"] * -1) - 1]["previousNode"] ?>">
+                <?php } ?>
+            </fieldset>
+            <fieldset>
+                <button type="submit" id="previousButton">Précédent</button>
+            </fieldset>
+        </form>
     <?php } ?>
 
-    <?php if (!isset($isTree)) {
-        if (!isset($isIndex)) { ?>
-            <a href="./page/tree.php">Voir l'arbre</a>
-        <?php } else { ?>
-            <a href="../tree.php">Voir l'arbre</a>
-    <?php
-        }
-    }
-    ?>
+    <a href="">Arbre</a>
 </footer>

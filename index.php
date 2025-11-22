@@ -18,6 +18,8 @@
     <main>
         <form id="chooseName" action="./page/node.php" method="post">
             <fieldset>
+                <input type="hidden" name="nodeNumber" value="0">
+
                 <label for="userName">Comment t'appele-tu étranger ?</label>
                 <input type="text" name="userName">
             </fieldset>
@@ -26,7 +28,7 @@
 
     <?php
         $isIndex = true;
-        require "./templates/_footer.phtml"
+        require "./templates/_footer.phtml";
     ?>
 </body>
 </html>

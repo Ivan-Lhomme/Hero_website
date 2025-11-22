@@ -1,7 +1,19 @@
+<?php $nbNode =  count($nodeContainer[$_POST["nodeNumber"]]["choices"])?>
 <form action="" method="post">
     <fieldset>
-        <?php foreach ($nodeContainer as $node) { ?>
-            <input type="radio" name="<?= $node["name"] ?>">
+        <?php for ($x = 0; $x < $nbNode; $x++) {
+                $choice = $nodeContainer[$_POST["nodeNumber"]]["choices"][$x];
+                $value = $nodeContainer[$_POST["nodeNumber"]]["nextNode"][$x];
+        ?>
+            <div class="input">
+                <input type="radio" name="nodeNumber" id="<?= $choice ?>" value="<?= $value ?>" required>
+                <label for="<?= $choice ?>"><?= $choice ?></label>
+            </div>
         <?php } ?>
+
+        <input type="hidden" name="userName" value="<?= $_POST["userName"] ?>">
+    </fieldset>
+    <fieldset id="submit">
+        <button type="submit">Action</button>
     </fieldset>
 </form>

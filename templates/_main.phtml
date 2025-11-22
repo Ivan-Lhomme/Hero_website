@@ -1,11 +1,21 @@
-<main>
-    <p>
-        <?= $nodeContainer[$nodeNumber]["context"] ?>
-    </p>
+<main> 
+    <?php if (!is_numeric($_POST["nodeNumber"])) { ?>
+        <p>
+            <?= $winContainer[$_POST["nodeNumber"]]["text"] ?>
+        </p>
+    <?php } else if ($_POST["nodeNumber"] >= 0) { ?>
+        <p>
+            <?= $nodeContainer[$_POST["nodeNumber"]]["context"] ?>
+        </p>
 
-    <?php
-        if (count($nodeContainer[0]["choices"]) > 0) {
-            require "../templates/_form.phtml";
-        }
-    ?>
+        <?php
+            if (count($nodeContainer[0]["choices"]) > 0) {
+                require "../templates/_form.phtml";
+            }
+        ?>
+    <?php } else { ?>
+        <p>
+            <?= $failContainer[($_POST["nodeNumber"] * -1) - 1]["text"] ?>
+        </p>
+    <?php } ?>
 </main>

@@ -1,7 +1,7 @@
 <?php
-    require "../controllers/nodeContainer.php";
-
-    $nodeNumber = 0;
+    require "../data/nodeContainer.php";
+    require "../data/failContainer.php";
+    require "../data/winContainer.php";
 ?>
 
 <!DOCTYPE html>
@@ -13,11 +13,19 @@
     <link rel="stylesheet" href="../assets/style/stylesheet_global.css">
     <link rel="stylesheet" href="../assets/style/stylesheet_node.css">
 
-    <title><?= $nodeContainer[$nodeNumber]["name"] ?></title>
+    <?php if (!is_numeric($_POST["nodeNumber"])) { ?>
+        <title>Gagné !</title>
+    <?php } else if ($_POST["nodeNumber"] >= 0) { ?>
+        <title><?= $nodeContainer[$_POST["nodeNumber"]]["name"] ?></title>
+    <?php } else { ?>
+        <title><?= $failContainer[($_POST["nodeNumber"] * -1) - 1]["name"] ?></title>
+    <?php } ?>
 </head>
 <body>
     <?php
-        require "../templates/_header.phtml";
+        if (is_numeric($_POST["nodeNumber"])) {
+            require "../templates/_header.phtml";
+        }
         require "../templates/_main.phtml";
         require "../templates/_footer.phtml";
     ?>

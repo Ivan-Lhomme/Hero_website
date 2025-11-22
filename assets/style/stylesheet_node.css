@@ -1,0 +1,77 @@
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    form{
+        border-color: #bababb;
+    }
+    button{
+        background-color: #161b22;
+        color: #bababb;
+        border-color: #bababb;
+    }
+}
+
+
+/* global */
+form{
+    border: 1px solid;
+    border-radius: 10vw;
+    width: 60vw;
+    margin: 10% auto 0 auto;
+}
+fieldset{
+    border: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10%;
+    padding-top: 2%;
+    width: fit-content;
+    margin: 0 auto;
+}
+label{
+    font-size: 2.5vw;
+    width: 100%;
+}
+button{
+    border-radius: 0.5vw;
+    font-size: 3vw;
+    border: 1px solid;
+    padding: 1% 6%;
+    width: fit-content;
+    margin: 0 auto;
+}
+input{
+    width: 1vw;
+    height: 1vw;
+    margin: auto 0;
+}
+
+/* class */
+.input{
+    display: flex;
+    gap: 2%;
+    width: 100%;
+}
+
+/* id */
+#submit{
+    padding-top: 10%;
+    padding-bottom: 2%;
+}
+#previous{
+    display: grid;
+    margin: 0;
+    border: none;
+    width: fit-content;
+}
+#previous > *{
+    grid-area: 1 / 1;
+}
+#previousButton{
+    border: none;
+    background: none;
+    font-size: 3vw;
+    margin: auto;
+    cursor: pointer;
+}
