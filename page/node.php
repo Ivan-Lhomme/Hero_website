@@ -18,7 +18,7 @@
     <?php } else if ($_POST["nodeNumber"] >= 0) { ?>
         <title><?= $nodeContainer[$_POST["nodeNumber"]]["name"] ?></title>
     <?php } else { ?>
-        <title><?= $failContainer[($_POST["nodeNumber"] * -1) - 1]["name"] ?></title>
+        <title>Perdue !</title>
     <?php } ?>
 </head>
 <body>
